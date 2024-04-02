@@ -1,2 +1,2 @@
 # bioinformatica
-Repositorio para entregas de Introduccion a la Bioinformática
+Repositorio para entregas de Introducción a la Bioinformática
