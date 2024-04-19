@@ -1,6 +1,7 @@
 import time 
 import os 
 from font import bcolors
+from font import animTextPrint
 
 
 def clear_screen(): 
@@ -31,3 +32,23 @@ def showPresentation():
         with open(frame_file, "r") as file: 
             frame_content = file.read() 
             display_frame(frame_content, frame_delay)
+            
+            
+def prologo(aGame):
+    os.system('cls')
+    delay=0
+    
+    animTextPrint("En un viaje celular estarás adentrándote en una célula eucariota...",delay)
+    
+    animTextPrint('La célula fué atacada por un virus y no es capaz por si sola de realizar los procesos de TRANSCRIPCIÓN y TRADUCCIÓN.',delay)
+    
+    animTextPrint('Tu misión, será lograr subtituir la mayor cantidad de aminoácidos para formar cadenas polipeptídicas y luego proteínas.',delay)
+    
+    print("")
+    
+    
+    
+    print('Presiona una tecla para continuar...')
+    input()
+    
+    aGame.setLevel(1)            
