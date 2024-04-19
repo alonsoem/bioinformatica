@@ -117,7 +117,7 @@ def getComputer():
         
         findOut=searchTripletValue(value)
         if findOut=="":
-            print (f'El codón o triplete {value} no fue encontrado')
+            print (f'El codón o triplete {value} no fué encontrado')
            
         else:
             print (f'El codón o triplete{value} puede ser {findOut}')
@@ -139,18 +139,18 @@ def etapaDos(aGame):
     arnM=aGame.getArnM()
     os.system('cls')
     print(f'El ARN-m está listo para ser leído pero la función del Ribosoma también fué alcanzada por el virus.')
-    print ("Deberás sustituir la función del ARN TRANSFERENCIA y elegir los aminoácidos que correspondan de leer el ARN MENSAJERO.")          
+    print ("Deberás sustituir la función del ARN TRANSFERENCIA y substituir los aminoácidos que correspondan de leer el ARN MENSAJERO.")          
     print("")
-    print(f'Recuerda que la hebra de ARN-m es : {arnM}')        
+    print(f'Recordá que la hebra de ARN-m es : {arnM}')        
     print ("")
     out=False
     while (out==False):
         print ("1) Leer un codón / triplete")
         print ("2) Volver al núcleo")
-        print ("3) Usar Computadora")
-        print ("4) Aplicar aminoácido al codón")
+        print ("3) Usar Computadora (ayuda)")
+        print ("4) Sustituir aminoácido por codón")
         print ("5) Ver hebra de ARN-m pendiente")
-        print ("6) Ver cantidad de aminoácidos sintetizados")
+        print ("6) Ver cantidad de aminoácidos substituidos")
         value= int(input())
         print ("")
         

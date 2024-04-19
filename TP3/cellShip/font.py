@@ -15,7 +15,7 @@ class bcolors:
 def animTextPrint(text,endDelay):
     for i  in range(0 , len(text)):
         print (f"{text[i]}",end='')
-        time.sleep(0.01)
+        time.sleep(0.05)
     print("")
     time.sleep(endDelay) 
     
