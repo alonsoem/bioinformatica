@@ -44,7 +44,7 @@ def prologo(aGame):
     
     animTextPrint('Tu misión, será lograr subtituir la mayor cantidad de aminoácidos para formar cadenas polipeptídicas y luego proteínas.',delay)
     
-    animTextPrint('Tranquil@, tendrás una computadora que te ayudara en el proceso!!',delay)
+    animTextPrint('Tranquil@, tendrás una computadora que te ayudará en el proceso!!',delay)
     print("")
     
     

@@ -23,66 +23,66 @@ def loopSliced(arnM):
 
 def searchTripletValue(value):
     aminoDictionary = {
-        "GCG":["A"],
-        "GCA":["A"],
-        "GCC":["A"],
-        "GCT":["A"],
-        "GAG":["E"],
-        "GAA":["E"],
-        "GAC":["D"],
-        "GAT":["D"],
-        "ATG":["M"], "ATA":["I"], "ATC":["I"], "ATT":["I"],"TTG":["L"],"TTA":["L"],
-        "CGA":["R"], "CGT":["R"], "CGC":["R"], "CGG":["R"],"AGG":["R"],"AGA":["R"],
-        "CCC":["P"], "CCG":["P"], "CCT":["P"], "CCA":["P"],
-        "CAG":["Q"], 
-        "CAT":["Q"],
-        "CAC":["H"], 
-        "CAT":["H"],
-        "ATG":["M"],
-        "ATA":["I"],
-        "ATC":["I"],
-        "ATT":["I"],
-        "AGT":["S"], 
-        "AGC":["S"],
-        "TCC":["S"],
-        "TCG":["S"],
-        "TCT":["S"],
-        "TCA":["S"],
-        "ACC":["T"],
-        "ACG":["T"],
-        "ACT":["T"],
-        "ACA":["T"],
-        "AAA":["K"],
-        "AAG":["K"],
-        "AAC":["N"],
-        "AAT":["N"],
-        "TTC":["F"], 
-        "TTT":["F"],
-        "TGG":["W"],
+        "GCG":["A","Alanina"],
+        "GCA":["A","Alanina"],
+        "GCC":["A","Alanina"],
+        "GCT":["A","Alanina"],
+        "GAG":["E","Ácido Glutámico"],
+        "GAA":["E","Ácido Glutámico"],
+        "GAC":["D","Ácido Aspártico"],
+        "GAT":["D","Ácido Aspártico"],
+        "ATG":["M","Metionina"], "ATA":["I","Isoleucina"], "ATC":["I","Isoleucina"], "ATT":["I","Isoleucina"],"TTG":["L","Leucina"],"TTA":["L","Leucina"],
+        "CGA":["R","Arginina"], "CGT":["R","Arginina"], "CGC":["R","Arginina"], "CGG":["R","Arginina"],"AGG":["R","Arginina"],"AGA":["R","Arginina"],
+        "CCC":["P","Prolina"], "CCG":["P","Prolina"], "CCT":["P","Prolina"], "CCA":["P","Prolina"],
+        "CAG":["Q","Glutamina"], 
+        "CAT":["Q","Glutamina"],
+        "CAC":["H","Histidina"], 
+        "CAT":["H","Histidina"],
+        "ATG":["M","Metionina"],
+        "ATA":["I","Isoleucina"],
+        "ATC":["I","Isoleucina"],
+        "ATT":["I","Isoleucina"],
+        "AGT":["S","Serina"], 
+        "AGC":["S","Serina"],
+        "TCC":["S","Serina"],
+        "TCG":["S","Serina"],
+        "TCT":["S","Serina"],
+        "TCA":["S","Serina"],
+        "ACC":["T","Treonina"],
+        "ACG":["T","Treonina"],
+        "ACT":["T","Treonina"],
+        "ACA":["T","Treonina"],
+        "AAA":["K","Lisina"],
+        "AAG":["K","Lisina"],
+        "AAC":["N","Asparagina"],
+        "AAT":["N","Asparagina"],
+        "TTC":["F","Fenilalanina"], 
+        "TTT":["F","Fenilalanina"],
+        "TGG":["W","Triptofano"],
         "TGA":["START"],
-        "TGC":["C"],
-        "TGT":["C"],
+        "TGC":["C","Cisteína"],
+        "TGT":["C","Cisteína"],
         "TAG":["STOP"],
         "TAA":["STOP"],
-        "TAC":["Y"], 
-        "TAT":["Y"],
-        "GTC":["V"],
-        "GTG":["V"],
-        "GTT":["V"], 
-        "GTA":["V"],
-        "GGC":["G"],
-        "GGG":["G"], 
-        "GGT":["G"], 
-        "GGA":["G"],
-        "CTA":["L"],
-        "CTG":["L"],
-        "CTT":["L"],
-        "CTC":["L"],
+        "TAC":["Y","Tirosina"], 
+        "TAT":["Y","Tirosina"],
+        "GTC":["V","Valina"],
+        "GTG":["V","Valina"],
+        "GTT":["V","Valina"], 
+        "GTA":["V","Valina"],
+        "GGC":["G","Glicina"],
+        "GGG":["G","Glicina"], 
+        "GGT":["G","Glicina"], 
+        "GGA":["G","Glicina"],
+        "CTA":["L","Leucina"],
+        "CTG":["L","Leucina"],
+        "CTT":["L","Leucina"],
+        "CTC":["L","Leucina"],
         
   
     }
     try:
-        return aminoDictionary[value][0]
+        return aminoDictionary[value]
     except Exception:
         return ""
 
@@ -93,6 +93,7 @@ def getComputer():
      while out==False:
         os.system('cls')
         value = click.prompt('Indica el codón o triplete', type=str)
+        print ("")
         value=value.upper()
         
         findOut=searchTripletValue(value)
@@ -100,15 +101,17 @@ def getComputer():
             print (f'El codón o triplete {value} no fué encontrado')
            
         else:
-            print (f'El codón o triplete{value} puede ser {findOut}')
-
+            print (f'El codón o triplete {value} es el aminoácido {findOut[1]} y identifica con {findOut[0]}')
+        
+        print ("")
         userContinue = click.prompt('¿Quiere buscar otro codón? (S/N)', type=str)
         
         if userContinue.upper()=="N":  
             out=True    #sale de la computadora
         
+        
 def testArnTriplet(arnM,amino):
-    if searchTripletValue(arnM[0:3])==amino:
+    if searchTripletValue(arnM[0:3])[0]==amino:
         return True
     else:
         raise Exception("VIDA PERDIDA")
@@ -157,7 +160,7 @@ def etapaDos(aGame):
                     
                     
                     print (f"{bcolors.OKGREEN}EXCELENTE! Obtuvimos un aminoácido!{bcolors.ENDC}")     
-                    print(f'Ya sumamos {aGame.getAminos()} aminoácidos sintetizados!')
+                    print(f'Ya sumamos {aGame.getAminos()} aminoácidos substituidos!')
                     print ("")
                 
                 
