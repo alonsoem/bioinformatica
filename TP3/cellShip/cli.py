@@ -20,7 +20,7 @@ def presentacion(aGame):
     
     animTextPrint('La célula fué atacada por un virus y no es capaz por si sola de realizar los procesos de TRANSCRIPCIÓN y TRADUCCIÓN.',delay)
     
-    animTextPrint('Tu misión, será lograr sintetizar la mayor cantidad de aminoácidos para formar cadenas polipeptídicas y luego proteínas.',delay)
+    animTextPrint('Tu misión, será lograr subtituir la mayor cantidad de aminoácidos para formar cadenas polipeptídicas y luego proteínas.',delay)
     
     print("")
     
@@ -193,7 +193,7 @@ def etapaDos(aGame):
                 print ("")
         elif value==6:
             print ("")
-            print (f'Ya sintetizaste {aGame.getAminos()} aminoácidos en total!')
+            print (f'Ya substituiste {aGame.getAminos()} aminoácidos en total!')
             print ("")
             
         
