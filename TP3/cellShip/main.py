@@ -103,6 +103,7 @@ def getComputer():
         else:
             print (f'El codón o triplete {value} es el aminoácido {findOut[1]} y identifica con {findOut[0]}')
         
+        
         print ("")
         userContinue = click.prompt('¿Quiere buscar otro codón? (S/N)', type=str)
         
@@ -122,10 +123,11 @@ def etapaDos(aGame):
     arnM=aGame.getArnM()
     os.system('cls')
     print(f'El ARN-m está listo para ser leído pero la función del Ribosoma también fué alcanzada por el virus.')
-    print ("Deberás sustituir la función del ARN TRANSFERENCIA y substituir los aminoácidos que correspondan de leer el ARN MENSAJERO.")          
+    print ("Deberás auxiliar la función del ARN TRANSFERENCIA y sustituir los aminoácidos que correspondan de leer el ARN MENSAJERO.")          
     print("")
     print(f'Recordá que la hebra de ARN-m es : {arnM}')        
     print ("")
+    
     out=False
     while (out==False):
         print ("1) Leer un codón / triplete")
@@ -134,7 +136,8 @@ def etapaDos(aGame):
         print ("4) Sustituir aminoácido por codón")
         print ("5) Ver hebra de ARN-m pendiente")
         print ("6) Ver cantidad de aminoácidos substituidos")
-        value= int(input())
+        print ("")
+        value= int(input("Tu opción:"))
         print ("")
         
         if value==1:

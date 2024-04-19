@@ -42,7 +42,7 @@ def prologo(aGame):
     
     animTextPrint('La célula fué atacada por un virus y no es capaz por si sola de realizar los procesos de TRANSCRIPCIÓN y TRADUCCIÓN.',delay)
     
-    animTextPrint('Tu misión, será lograr subtituir la mayor cantidad de aminoácidos para formar cadenas polipeptídicas y luego proteínas.',delay)
+    animTextPrint('Tu misión, será lograr sustituir la mayor cantidad de aminoácidos para formar cadenas polipeptídicas y luego proteínas.',delay)
     
     animTextPrint('Tranquil@, tendrás una computadora que te ayudará en el proceso!!',delay)
     print("")
